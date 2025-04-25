@@ -1,0 +1,38 @@
+.item-image {
+    width: 150px;
+    height: auto;
+}
+
+.item_box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.item_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 70px;
+    padding-left: 60px;
+    padding-top: 146px;
+}
+
+#text1 {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#text2 {
+    font-size: 18px;
+    color: black;
+}

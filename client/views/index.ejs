@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleShop</title>
+    <link rel = "stylesheet" href = "/SimpleShop/Styles/indexStyle.css">
+</head>
+<body>
+    <!-- comment example -->
+    <div id = "box1"><a href = "/SimpleShop/Shirts">Shirts</a></div>
+    <div id = "box2"><a href = "/SimpleShop/Shoes">Shoes</a></div>
+    <div id = "box3"><a href = "/SimpleShop/Bags">Bags</a></div>
+    <div id = "box4"><a href = "/SimpleShop/Help">Help</a></div>
+    <div id = "box5"><a href = "/SimpleShop/AboutUs">About us</a></div> 
+    <div id = "box6">This website is under development</div>
+    <div id = "box7">SimpleShop</div>
+
+    <form action = "/SimpleShop/search" method = "get" id = "searchcompo1">
+        <input type = "text" name = "query" placeholder = "Type to Search" id = "search1">
+        <button type="submit" class = "button1"></button>
+        <!--<img src = "/server/images/search-icon.jpg" id = "buttonimg1">-->
+    </form>
+
+
+    <% if (items && items.length) { %>
+        <div class="item_grid">
+          <% items.forEach(item => { %>
+            <a href="/SimpleShop/Product/<%= item._id %>">
+              <div class="item_box">
+                <img src="<%= item.item_image %>" alt="<%= item.name %>" class="item-image">
+                <div id="text1"><%= item.name %></div>
+                <div id="text2">$<%= item.price %></div>
+              </div>
+            </a>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <% if (message) { %>
+            <p class="search-message"><%= message %></p>
+        <% } %>
+        <div class="poster_grid">
+            <div id = "poster1"><img src = "/SimpleShop/images/sale.jpg"></div>
+            <div id = "poster2"><img src = "/SimpleShop/images/limited_edition.jpg"></div>
+            <div id = "poster3"><img src = "/SimpleShop/images/special_offer.jpg"></div>
+        </div>
+      <% } %>
+</body>
+</html>

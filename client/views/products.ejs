@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> - Product Details</title>
+    <link rel="stylesheet" href="/SimpleShop/Styles/productsStyles.css">
+</head>
+<body>
+    <div id = "box1"><a href = "/SimpleShop/Shirts">Shirts</a></div>
+    <div id = "box2"><a href = "/SimpleShop/Shoes">Shoes</a></div>
+    <div id = "box3"><a href = "/SimpleShop/Bags">Bags</a></div>
+    <div id = "box4"><a href = "/SimpleShop/Help">Help</a></div>
+    <div id = "box5"><a href = "/SimpleShop/AboutUs">About us</a></div> 
+    <div id = "box6">This website is under development</div>
+    <div id = "box7">SimpleShop</div>
+
+    <div class="product-details">
+        <img src="<%= product.item_image %>" alt="<%= product.name %>" id = "product_img">
+        <div id = "details-box">
+            <div id="name"><%= product.name %></div>
+            <div id="price">$<%= product.price %></div>
+        </div>
+      </div>
+</body>
+</html>

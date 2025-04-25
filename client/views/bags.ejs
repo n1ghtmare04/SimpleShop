@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bags</title>
+    <link rel = "stylesheet" href = "/SimpleShop/Styles/bagsStyles.css">
+    <link rel="stylesheet" href="/SimpleShop/Styles/imgStyles.css">
+</head>
+<body>
+    <div id = "box7"><a href = "/SimpleShop">Home</a></div>
+    <div id = "box1"><a href = "/SimpleShop/Shirts">Shirts</a></div>
+    <div id = "box2"><a href = "/SimpleShop/Shoes">Shoes</a></div>
+    <div id = "box3"><a href = "/SimpleShop/Help">Help</a></div>
+    <div id = "box4"><a href = "/SimpleShop/AboutUs">About us</a></div>
+    <div id = "box5">This website is under development</div>
+    <div id = "box6">SimpleShop</div>
+    <div class = "item_grid">
+        <% items.forEach(item => { %>
+            <a href="/SimpleShop/Product/<%= item._id %>">
+                <div class = "item_box">
+                    <img src = "<%= item.item_image %>" alt = "<%= item.name %>" class="item-image">
+                    <div id = "text1"><%= item.name %></div>
+                    <div id = "text2">$<%= item.price %></div>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+</body>
+</html>
